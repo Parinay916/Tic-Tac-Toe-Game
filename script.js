@@ -110,7 +110,7 @@ boxes.forEach((box) => {
   });
 });
 
-/* CHECK WINNER OR DRAW */
+
 const checkWinner = () => {
   for (let pattern of winPatterns) {
     let [a, b, c] = pattern;
@@ -132,7 +132,7 @@ const checkWinner = () => {
     }
   }
 
-  // Draw check
+
   let allFilled = true;
   boxes.forEach((box) => {
     if (box.innerText === "") {
@@ -146,14 +146,13 @@ const checkWinner = () => {
   }
 };
 
-/* DISABLE ALL BOXES */
 const disableBoxes = () => {
   boxes.forEach((box) => {
     box.disabled = true;
   });
 };
 
-/* RESET GAME */
+
 const resetGame = () => {
   currentPlayer = "X";
   gameOver = false;
@@ -168,3 +167,4 @@ const resetGame = () => {
 };
 
 resetBtn.addEventListener("click", resetGame);
+
